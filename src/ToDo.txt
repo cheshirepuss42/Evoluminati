@@ -1,0 +1,104 @@
+-------------------------------------------------------------------------------------------------
+To do:
+-------------------------------------------------------------------------------------------------
+
+Gameplay:
+
+-add aura's to creeps
+-add immunity-trait
+-add slowmoving orb
+-make creetypes, traits and effects based on gdd
+-add increasing max energy to upgrade system
+-implement flamer, snipertower
+-make structure-placing have a cooldown
+-make teleporter chargeable (hold mouse down for an amount of time before teleporting)
+-while teleporter charges, change cursor into body gaining alpha from 0 to 0.5 (ghost)
+-when charged the teleport happens when the mouse is released, so you can aim with mouse
+
+
+UI:
+-add a charging progressbar to player for cooldownsor charging
+
+Fixes:	
+-fix memory-leak between switching world
+-fix visual shift during tutorial
+-fix weapon visible in wrong place in beginning
+-fix player getting stuck after teleporting
+-fix movement (slide against walls easier)
+-fix energy-spark (with draining)
+
+Optional:
+
+-show all waves coming in next wave bar
+-make toggle for showing healthbars and sparks
+-make it resizable (scale images, paths)
+-make tile-interpreter (check walls to see which tiles to use or rotate)
+
+-------------------------------------------------------------------------------------------------
+Done:
+-------------------------------------------------------------------------------------------------
+(16-6-12)
+	-retool ui: only show bars, and when holding space down, game pauses and selectionscreen 	appears, and goes away when spacebar released (like mass effect)
+	-added traits to creeps, and moved xml-reading for creeps, characters and upgrades into the 	code
+	-added aura's, currently only for player
+	-added creeptypes based on traits
+	-fixed damagesparks
+	
+(5-6-12) 
+	-implemented upgrade-system
+(5-5-12)
+	-made teleporter
+	-added background	
+(29-4-12)
+	-make bullets with seperate effects
+	-fix slowing floortraps
+(26-4-12)
+	-show sparks when picking up points and recharging
+	-made range-indicator more clear
+	-add kill-all-creeps effect
+	-find a way to make mouseclick not work at first 0.5 seconds in the start of a level
+(13-4-12)
+	-updated todo-list
+(13-3-12)
+	-made ingame tutorial
+	-fixed saving
+	-made logical navigation
+	-added sound to recharging
+	-made conversation skippable
+	
+(06-3-12)
+	-made conversationpanels slide
+(05-3-12)
+	-implemented player-savegame
+	-implemented upgrade-system
+	-added a charge-effect to weapons you can toggle by pressing q
+(01-3-12)
+	-added pic variable to creeps.xml
+	-updated level-editing manual
+	-plugged up some memory leaks
+(29-2-12)
+	-added conversationpanels to the start of a level
+(26-2-12)
+	-added new creeps (and changed the way they are loaded)
+	-added variables (health, speed) to creeps.xml
+	-implemented rechargepoints
+	-touching creeps means losing energy, standing on a rechargepoint grants energy
+	-player now carries a weapon instead of being one
+	-upgrades are selectable by keys 1-x and by clicking in the menu
+	-towers carry weapons (gun images which rotate)
+(25-2-12)
+	-made the game time-relative instead of frame-relative (which should make it work a lot smoother, and allows for a speed-adjust button)
+	-made the declaration-files for creeps and upgrades (required a lot of rewrite)
+	-so the level-xml now has id's in them
+	-level-timeout now in milliseconds
+	-numpad + and - change game-speed
+	
+(24-2-12)
+	-added startenergy-variable to levelxml
+	-added visual start and endpoints
+	-made levels go in sequence with resultscreens and a game-overscreen
+(23-2-12) 
+	-The waves load in as defined in xml
+	-There is a win-situation (all waves are defeated), you get a score report, and the option to go to another level
+	-The lose-situation is when 10 creeps have passed (option to reset with r)
+	

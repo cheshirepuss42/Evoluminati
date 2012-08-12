@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<data>
+  <settings width="16" height="16" startenergy="500" maxcreeps="1" logo="BasicCreep" />
+  <player x="4" y="4" />
+  <goal x="14" y="14" />
+  <start x="1" y="1" id="1" />
+  <recharge x="13" y="14" />
+  <recharge x="13" y="13" />
+  <recharge x="14" y="13" />
+  <structure structureid="StandardTower" x="7" y="7" w="2" h="2" />
+  <structure structureid="BasicWall" x="1" y="10" w="11" h="1" />
+  <structure structureid="BasicWall" x="3" y="5" w="12" h="1" />
+  <upgrade id="StandardTower" />
+  <upgrade id="PeaShooter" />
+  <upgrade id="BasicWall" />
+  <talk charactername="AI" side="left" text="wanna hear a joke?" />
+  <talk charactername="Player" side="right" text="Want doesnt describe my anticipation" />
+  <talk charactername="Scientist" side="right" text="He has great jokes" />
+  <talk charactername="AI" side="left" text="Why does the pope shit in the woods?" />
+  <talk charactername="Player" side="right" text="Because he had to shit and was out in the woods?" />
+  <talk charactername="AI" side="left" text="Oh, you heard it..." />
+  <talk charactername="Scientist" side="right" text="The one about the catholic bears is better." />
+  <wave timeout="20000">
+    <squad creepid="BasicCreep" startpointid="1" amount="1" spacing="0" />
+  </wave>
+  <wave timeout="20000">
+    <squad creepid="BigCreep" startpointid="1" amount="20" spacing="500" />
+  </wave>
+</data>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<data>
+  <settings width="17" height="13" startenergy="500" maxcreeps="10" logo="BasicCreep" />
+  <player x="4" y="4" />
+  <goal x="15" y="11" />
+  <start x="1" y="1" id="1" />
+  <trap type="slow" x="6" y="8" />
+  <trap type="slow" x="8" y="6" />
+  <trap type="slow" x="10" y="4" />
+  <trap type="slow" x="5" y="9" />
+  <trap type="slow" x="11" y="3" />
+  <recharge x="14" y="11" />
+  <recharge x="14" y="10" />
+  <recharge x="15" y="10" />
+  <structure structureid="BasicWall" x="6" y="1" w="1" h="7" />
+  <structure structureid="BasicWall" x="10" y="5" w="1" h="7" />
+  <structure structureid="StandardTower" x="2" y="10" w="2" h="2" />
+  <structure structureid="StandardTower" x="13" y="1" w="2" h="2" />
+  <upgrade id="StandardTower" />
+  <upgrade id="PeaShooter" />
+  <talk charactername="AI" side="left" text="what the hell are YOU looking at!?!" />
+  <wave timeout="0">
+    <squad creepid="FastMover" startpointid="1" amount="5" spacing="500" />
+  </wave>
+  <wave timeout="0">
+    <squad creepid="BasicCreep" startpointid="1" amount="10" spacing="500" />
+  </wave>
+</data>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<data>
+  <settings width="15" height="19" startenergy="500" maxcreeps="10" logo="BasicCreep" />
+  <player x="4" y="4" />
+  <goal x="7" y="17" />
+  <start x="1" y="17" id="3" />
+  <start x="13" y="17" id="4" />
+  <trap type="slow" x="1" y="5" />
+  <trap type="slow" x="1" y="6" />
+  <trap type="slow" x="3" y="14" />
+  <trap type="slow" x="4" y="14" />
+  <trap type="slow" x="5" y="14" />
+  <trap type="slow" x="6" y="14" />
+  <trap type="slow" x="7" y="14" />
+  <trap type="slow" x="8" y="14" />
+  <trap type="slow" x="9" y="14" />
+  <trap type="slow" x="10" y="14" />
+  <trap type="slow" x="11" y="14" />
+  <recharge x="3" y="17" />
+  <recharge x="11" y="17" />
+  <recharge x="6" y="7" />
+  <recharge x="8" y="8" />
+  <structure structureid="BasicWall" x="2" y="5" w="1" h="13" />
+  <structure structureid="BasicWall" x="12" y="2" w="1" h="16" />
+  <structure structureid="StandardTower" x="7" y="6" w="2" h="2" />
+  <structure structureid="StandardTower" x="6" y="8" w="2" h="2" />
+  <upgrade id="PeaShooter" />
+  <upgrade id="StandardTower" />
+  <talk charactername="Player" text="Just me i guess" />
+  <wave timeout="20000">
+    <squad creepid="BasicCreep" startpointid="3" amount="15" spacing="250" />
+  </wave>
+  <wave timeout="20000">
+    <squad creepid="FastMover" startpointid="4" amount="10" spacing="250" />
+    <squad creepid="BasicCreep" startpointid="4" amount="5" spacing="250" />
+  </wave>
+  <wave timeout="20000">
+    <squad creepid="BasicCreep" startpointid="3" amount="5" spacing="250" />
+    <squad creepid="BasicCreep" startpointid="4" amount="5" spacing="250" />
+  </wave>
+  <wave timeout="20000">
+    <squad creepid="FastMover" startpointid="3" amount="10" spacing="250" />
+    <squad creepid="FastMover" startpointid="4" amount="10" spacing="250" />
+  </wave>
+</data>

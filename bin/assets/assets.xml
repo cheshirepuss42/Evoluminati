@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<!-- 
+	Here the sounds, graphic and level files are defined. 
+	The name-attribute is used in the code, but you can define new filenames for them if needed.
+	So you can change the files in the assets folder, and when you start the swf the new assets should be loaded.
+	This means of course that you can experiment with different sounds, graphics, and level-setups without any coding or compilation.	
+	-->
+	
+	<level name="1" file="level_01.xml"/>
+	<level name="2" file="level_02.xml"/>
+	<level name="3" file="level_03.xml"/>
+	<level name="4" file="level_04.xml"/>
+	<level name="5" file="level_05.xml"/>
+	<level name="6" file="level_06.xml"/>
+	<level name="7" file="level_07.xml"/>
+	<level name="8" file="level_08.xml"/>
+	<level name="9" file="level_09.xml"/>
+	<level name="10" file="level_10.xml"/>
+	<level name="11" file="level_11.xml"/>
+	<level name="12" file="level_12.xml"/>
+	<level name="13" file="level_13.xml"/>
+	<level name="14" file="level_14.xml"/>
+	<level name="15" file="level_15.xml"/>
+	<level name="16" file="level_16.xml"/>
+	<level name="17" file="level_17.xml"/>
+	<level name="18" file="level_18.xml"/>
+	<level name="19" file="level_19.xml"/>
+	<level name="20" file="level_20.xml"/>
+	
+	
+	<sound name="background_01" file="bg.mp3"/>
+	<sound name="background_02" file="MenuTheme.mp3"/>
+	<sound name="tower_01_new_01" file="towernew01.mp3"/>
+	<sound name="gun_01_fire_01" file="bulletfire.mp3"/>
+	<sound name="player_shoot" file="playershoot01.mp3"/>
+	<sound name="player_orb" file="select04.mp3"/>
+	<sound name="player_touched" file="playertouchcreep01.mp3"/>
+	<sound name="creep_01_hurt_01" file="creephit01.mp3"/>
+	<sound name="creep_01_death_01" file="creepdeath.mp3"/>
+	<sound name="creep_01_escape_01" file="lash.mp3"/>
+	<sound name="wave_new_01" file="waveentrance.mp3"/>
+	<sound name="pickup_01_new_01" file="pickupnew01.mp3"/>
+	<sound name="game_over" file="gameover01.mp3"/>
+	<sound name="pickup_01_collect_01" file="zip.mp3"/>
+	<sound name="menu_select_01" file="select03.mp3"/>
+	
+	<sound name="zombie_moan_01" file="zombies/Zombie01.mp3"/>
+	<sound name="zombie_moan_02" file="zombies/Zombie02.mp3"/>
+	<sound name="zombie_moan_03" file="zombies/Zombie03.mp3"/>
+	<sound name="zombie_moan_04" file="zombies/Zombie04.mp3"/>
+	<sound name="zombie_bite_01" file="zombies/ZombieBites01.mp3"/>
+	<sound name="zombie_bite_02" file="zombies/ZombieBites02.mp3"/>	
+	
+	<pic name="BasicCreep" file="creeps/scientist01.png"/>
+	<pic name="SlowBigCreep" file="creeps/creep12.png"/>
+	<pic name="BigCreep" file="creeps/Wraith_Uncloaked Base.png"/>
+	<pic name="FastMover" file="creeps/creep14.png"/>
+	<pic name="FastBigCreep" file="creeps/Wraith_Cloaked Base.png"/>
+	<pic name="BossOne" file="creeps/creep03.png"/>	
+	
+	<pic name="CreepDrop" file="points/bee2.png"/>
+	
+	<pic name="StandardTower" file="towers/tower01.png"/>
+	<pic name="ColdTower" file="towers/tower03.png"/>
+	<pic name="BasicWall" file="towers/wall02.png"/>
+	
+	<pic name="Laser" file="weapons/robotgun.png"/>
+	<pic name="PeaShooter" file="weapons/robotgun2c.png"/>
+	<pic name="Teleporter" file="weapons/robotgun2a.png"/>
+	<pic name="FreezeGun" file="weapons/robotgun2d.png"/>
+	<pic name="OrbGun" file="weapons/robotgun2b.png"/>
+	
+	<pic name="ShootingCursor" file="cursors/cursor_shoot02.png"/>	
+	
+	<pic name="scientist_01" file="creeps/scientist01.png"/>
+	<pic name="rechargepoint_01" file="points/rechargepoint01.png"/>
+	<pic name="rechargepoint_02" file="points/rechargepoint02.png"/>
+	<pic name="Entrance" file="points/point01.png"/>
+	
+	<pic name="RobotBody" file="player/robot.png"/>
+
+	<pic name="LaserBeam" file="projectiles/beam.png"/>
+	<pic name="Bullet" file="projectiles/bullet.png"/>
+	<pic name="Orb" file="projectiles/orb2.png"/>
+	<pic name="Flame" file="projectiles/flame.png"/>
+	
+	<pic name="AI" file="faces/face_01.jpg"/>	
+	<pic name="Player" file="faces/face_04.jpg"/>	
+	<pic name="Scientist" file="faces/face_05.jpg"/>	
+	
+	<pic name="stars1" file="stars_small04.jpg"/>	
+	<pic name="stars2" file="stars3.jpg"/>	
+	<pic name="stars3" file="stars.jpg"/>	
+	<pic name="stars4" file="stars_small03.jpg"/>	
+	<pic name="stars5" file="stars_small.jpg"/>	
+
+	<pic name="floortrap_01" file="floortiles/floortrap01.png"/>	
+	<pic name="floortrap_02" file="floortiles/floortrap02.png"/>	
+	<pic name="floortilesheet" file="floortiles/tilesheet.png"/>	
+	<pic name="labelgradient" file="labelgradient2.png"/>	
+	
+	
+</data>

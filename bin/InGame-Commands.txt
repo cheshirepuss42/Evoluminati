@@ -1,0 +1,10 @@
+numpad += speed up
+numpad -= speed down
+x = win level
+f = next wave
+awsd = control player
+f 1= kill all creeps
+shift-click = sell structure
+hold space = show arsenal-menu
+1-0 = change cursor to tower or gun
+q=select last-used weapon

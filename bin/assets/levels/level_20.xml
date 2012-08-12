@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<data>
+  <settings width="9" height="9" startenergy="500" maxcreeps="1" logo="BasicCreep" />
+  <player x="4" y="4" />
+  <goal x="7" y="7" />
+  <start x="1" y="1" id="1" />
+  <structure structureid="BasicWall" x="1" y="2" w="6" h="1" />
+  <upgrade id="BasicWall" />
+  <upgrade id="PeaShooter" />
+  <talk charactername="AI" side="left" text="wanna hear a joke?" />
+  <talk charactername="Player" side="right" text="Want doesnt describe my anticipation" />
+  <talk charactername="Scientist" side="right" text="He has great jokes" />
+  <talk charactername="AI" side="left" text="Why does the pope shit in the woods?" />
+  <talk charactername="Player" side="right" text="Because he had to shit and was out in the woods?" />
+  <talk charactername="AI" side="left" text="Oh, you heard it..." />
+  <talk charactername="Scientist" side="right" text="The one about the catholic bears is better." />
+  <wave timeout="20000">
+    <squad creepid="BasicCreep" startpointid="1" amount="1" spacing="0" />
+  </wave>
+  <wave timeout="20000">
+    <squad creepid="BigCreep" startpointid="1" amount="3" spacing="100" />
+  </wave>
+</data>

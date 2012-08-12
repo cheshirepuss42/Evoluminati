@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<!-- the general game settings -->
+	<settings width="15" height="12" startenergy="200" maxcreeps="10" logo="rechargepoint_01"></settings>
+	
+	<!-- player start locations -->
+	<player x="7" y="6"></player>
+	
+	<!-- entry points -->
+	<start x="1" y="1" id="1"></start>
+	<start x="1" y="10" id="2"></start>
+	<start x="13" y="1" id="3"></start>
+
+	
+	<!-- exit point -->
+	<goal x="13" y="10"></goal>
+	
+	<!-- recharge points -->
+	<recharge x="12" y="10"></recharge>
+	
+	<!-- initial structures / map layout -->
+	<trap type="slow" x="6" y="6"></trap>
+	<trap type="slow" x="6" y="7"></trap>
+	<trap type="slow" x="6" y="8"></trap>
+	<trap type="slow" x="6" y="9"></trap>
+	<trap type="slow" x="6" y="10"></trap>
+	
+	<trap type="fire" x="5" y="6"></trap>
+	<trap type="fire" x="5" y="7"></trap>
+	<trap type="fire" x="5" y="8"></trap>
+	<trap type="fire" x="5" y="9"></trap>
+	<trap type="fire" x="5" y="10"></trap>
+	
+	<trap type="slow" x="4" y="6"></trap>
+	<trap type="slow" x="4" y="7"></trap>
+	<trap type="slow" x="4" y="8"></trap>
+	<trap type="slow" x="4" y="9"></trap>
+	<trap type="slow" x="4" y="10"></trap>
+	
+
+	<trap type="slow" x="6" y="5"></trap>
+	<trap type="slow" x="7" y="5"></trap>
+	<trap type="slow" x="8" y="5"></trap>
+	<trap type="slow" x="9" y="5"></trap>
+	<trap type="slow" x="10" y="5"></trap>	
+	<trap type="slow" x="10" y="4"></trap>	
+	<trap type="slow" x="10" y="3"></trap>	
+	<trap type="slow" x="10" y="2"></trap>	
+	<trap type="slow" x="10" y="1"></trap>	
+	<!-- list of things the player can use, check upgrades.xml -->
+	<upgrade id="PeaShooter"></upgrade>
+	
+	<!-- the waves that will be set loose on this map, timeout is milliseconds to next wave  -->
+	<wave timeout="10000">		
+		<!-- the squad that is set loose, startpointid indicates where it spawns, spacing is milliseconds between next creep -->	
+		<squad creepid="BasicCreep" startpointid="1" amount="5" spacing="100"></squad>
+		
+		
+	</wave>	
+	<wave timeout="10000">		
+		<!-- the squad that is set loose, startpointid indicates where it spawns, spacing is milliseconds between next creep -->	
+		<squad creepid="BasicCreep" startpointid="3" amount="4" spacing="100"></squad>
+		<squad creepid="BasicCreep" startpointid="2" amount="4" spacing="100"></squad>
+		
+	</wave>	
+	<wave timeout="10000">		
+		<!-- the squad that is set loose, startpointid indicates where it spawns, spacing is milliseconds between next creep -->	
+		<squad creepid="BasicCreep" startpointid="1" amount="7" spacing="200"></squad>
+		<squad creepid="BasicCreep" startpointid="1" amount="7" spacing="600"></squad>
+		
+	</wave>		
+	<talk charactername="Scientist" text="nevermind, this is just placeholder text" side="left"></talk>
+	
+
+	
+
+</data>
