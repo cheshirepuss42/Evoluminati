@@ -42,7 +42,7 @@ Fixes:
 -fix stack overflow by making upgradestat serializable to non-recursive
 
 Optional:
--make a leveleditor (in c#?)
+
 -add destroyable walls
 	-player doesn't build them, only on level setup
 	-good for level-design
@@ -67,6 +67,8 @@ Optional:
 -------------------------------------------------------------------------------------------------
 Done:
 -------------------------------------------------------------------------------------------------
+(12-8-12)
+	-made leveleditor 
 (3-6-12)
 	-added flamethrower (alpha)
 (1-6-12)
