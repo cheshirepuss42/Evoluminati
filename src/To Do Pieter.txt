@@ -1,0 +1,146 @@
+-------------------------------------------------------------------------------------------------
+To do:
+-------------------------------------------------------------------------------------------------
+
+Gameplay:
+
+-make all creeps initially scientists, which when shot spawn creeps from different evolutionary lines	
+-add increasing max energy to upgrade system
+
+-implement snipertower
+-while teleporter charges, change cursor into body gaining alpha from 0 to 0.5 (ghost)
+-add message when level is over that player should move to scientist/next room
+-add pickupsystem 
+	-pickups are temporary boosts that can be used when needed
+	-there might be one or more pickups on start
+	-obtain with riding over it
+	-when you obtain a pickup you lose the one you had if unused
+	-pickups might be dropped by bosses
+	-use with f or q
+	-examples:
+		-big damage to all creeps
+		-temp creepdrops are worth double
+		-temp range and shooting speed and dmg up
+		-temp energydrain by creeps turns into gain
+		-temp slow to all creeps
+		-temp towers double shooting speed and up dmg
+
+UI:
+-show which weapon is currently selected 
+-make buttons quickly slide in when opening menu, and out when closing it again
+-add blurring overlay behind menu
+
+Fixes:	
+
+-fix memory-leak between switching worlds
+-fix showing infotext when hovering over buttons ingame
+-fix visual shift during tutorial
+-fix weapon visible in wrong place in beginning
+-fix player getting stuck after teleporting
+-fix energy-spark (with draining)
+-fix teleport charging and teleport location (middle of gridpoint), and charging-bar
+-fix stack overflow by making upgradestat serializable to non-recursive
+
+Optional:
+-make a leveleditor (in c#?)
+-add destroyable walls
+	-player doesn't build them, only on level setup
+	-good for level-design
+	-creeps can't destroy them (though maybe there could be an explosive creep that does just that)
+	-get damage like creeps from your gun
+	-destroying them takes a lot of damage (therefore time and energy), can happen unintentionally when fighting creeps
+
+
+-think of a way to have different creep-movement
+	-move,stop,move,stop
+	-move to a random reachable spot for some time, then to the goal
+	-chase player (for energydrainers), not smart, but move towards player all the time
+	-flyers
+	-move backward
+-make structure-placing have a cooldown
+-show all waves coming in next wave bar
+-make toggle for showing healthbars and sparks
+-make it resizable (scale images, paths)
+-make tile-interpreter (check walls to see which tiles to use or rotate)
+-add tween fx
+
+-------------------------------------------------------------------------------------------------
+Done:
+-------------------------------------------------------------------------------------------------
+(3-6-12)
+	-added flamethrower (alpha)
+(1-6-12)
+	-added blood
+	-creepimages can now be any size
+	-added speedafterfirsthit-trait
+	-made orbgun
+	-made poisongun
+	-fixed immunity-aura
+(25-6-12)
+	-added aura's to creeps
+	-added immunity effect
+(16-6-12)
+	-retool ui: only show bars, and when holding space down, game pauses and selectionscreen 	appears, and goes away when spacebar released (like mass effect)
+	-added traits to creeps, and moved xml-reading for creeps, characters and upgrades into the 	code
+	-added aura's, currently only for player
+	-added creeptypes based on traits
+	-fixed damagesparks
+	
+(5-6-12) 
+	-implemented upgrade-system
+(5-5-12)
+	-made teleporter
+	-added background	
+(29-4-12)
+	-make bullets with seperate effects
+	-fix slowing floortraps
+(26-4-12)
+	-show sparks when picking up points and recharging
+	-made range-indicator more clear
+	-add kill-all-creeps effect
+	-find a way to make mouseclick not work at first 0.5 seconds in the start of a level
+(13-4-12)
+	-updated todo-list
+(13-3-12)
+	-made ingame tutorial
+	-fixed saving
+	-made logical navigation
+	-added sound to recharging
+	-made conversation skippable
+	
+(06-3-12)
+	-made conversationpanels slide
+(05-3-12)
+	-implemented player-savegame
+	-implemented upgrade-system
+	-added a charge-effect to weapons you can toggle by pressing q
+(01-3-12)
+	-added pic variable to creeps.xml
+	-updated level-editing manual
+	-plugged up some memory leaks
+(29-2-12)
+	-added conversationpanels to the start of a level
+(26-2-12)
+	-added new creeps (and changed the way they are loaded)
+	-added variables (health, speed) to creeps.xml
+	-implemented rechargepoints
+	-touching creeps means losing energy, standing on a rechargepoint grants energy
+	-player now carries a weapon instead of being one
+	-upgrades are selectable by keys 1-x and by clicking in the menu
+	-towers carry weapons (gun images which rotate)
+(25-2-12)
+	-made the game time-relative instead of frame-relative (which should make it work a lot smoother, and allows for a speed-adjust button)
+	-made the declaration-files for creeps and upgrades (required a lot of rewrite)
+	-so the level-xml now has id's in them
+	-level-timeout now in milliseconds
+	-numpad + and - change game-speed
+	
+(24-2-12)
+	-added startenergy-variable to levelxml
+	-added visual start and endpoints
+	-made levels go in sequence with resultscreens and a game-overscreen
+(23-2-12) 
+	-The waves load in as defined in xml
+	-There is a win-situation (all waves are defeated), you get a score report, and the option to go to another level
+	-The lose-situation is when 10 creeps have passed (option to reset with r)
+	
