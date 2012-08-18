@@ -183,7 +183,7 @@ package Worlds
 				handleCreeps();
 				handleCursor();
 				handlePlayer();			
-				menu.setInfo("press space for menu\nwaves:" + waveCount+ "\npoints:" + player.upgradePoints);
+				menu.setInfo("press space for menu\nwaves left:" + String(data.waves.length-waveCount)+ "\npoints:" + player.upgradePoints);
 			}
 		}
 

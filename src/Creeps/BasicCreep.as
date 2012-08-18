@@ -8,7 +8,7 @@ package Creeps
 		public function init(g:GameInfo,startX:int, startY:int):void 
 		{
 			super._init(g, startX, startY, "BasicCreep");
-			traits.push(new SpawnsCreep(GI,FastMover));
+			traits.push(new SpeedOnFirstDamage());
 
 			
 		}		

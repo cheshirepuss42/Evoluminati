@@ -82,7 +82,7 @@ package UI
 			setHitbox(FP.width, menuHeight);
 			x = int(world.camera.x);
 			y = int(world.camera.y + (FP.height - menuHeight));
-			info = new Label().setup(GI,"Info:\n", 0, (FP.height - menuHeight), 200, menuHeight, 12);
+			info = new Label().setup(GI,"Info:\n", 0, (FP.height - menuHeight), 200, menuHeight,14);
 			waveTimer = new ProgressBar().setupProgressBar(GI,"new wave", 200, FP.height-barHeight , FP.width-info.width, barHeight,18);			
 			shieldStatus = new ProgressBar().setupProgressBar(GI,"shield", info.width, FP.height - (barHeight * 2), FP.width - info.width, barHeight, 18, 0x4444ff);
 			shieldStatus.setFilled(1, GI.currentLevelData.maxCreeps);

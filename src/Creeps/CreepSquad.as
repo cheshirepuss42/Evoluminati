@@ -48,8 +48,8 @@ package Creeps
 				
 				//add new creep based on established type to flashpunk engine
 				var creepType:Class = Object(GI.creeps[creepID]).constructor;
-				creepType(FP.world.create(creepType)).init(GI,G.offsetX + (entry.x * G.size), 
-															G.offsetY + (entry.y * G.size));
+				Spawner(FP.world.create(Spawner)).init(GI,G.offsetX + (entry.x * G.size), 
+															G.offsetY + (entry.y * G.size),creepType);
 				undeployed--;
 			}
 		}

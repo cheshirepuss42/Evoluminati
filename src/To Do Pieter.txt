@@ -1,12 +1,9 @@
 -------------------------------------------------------------------------------------------------
 To do:
 -------------------------------------------------------------------------------------------------
-
 Gameplay:
-
--make all creeps initially scientists, which when shot spawn creeps from different evolutionary lines	
+	
 -add increasing max energy to upgrade system
-
 -implement snipertower
 -while teleporter charges, change cursor into body gaining alpha from 0 to 0.5 (ghost)
 -add message when level is over that player should move to scientist/next room
@@ -26,16 +23,13 @@ Gameplay:
 		-temp towers double shooting speed and up dmg
 
 UI:
--show which weapon is currently selected 
 -make buttons quickly slide in when opening menu, and out when closing it again
 -add blurring overlay behind menu
 
 Fixes:	
 
 -fix memory-leak between switching worlds
--fix showing infotext when hovering over buttons ingame
 -fix visual shift during tutorial
--fix weapon visible in wrong place in beginning
 -fix player getting stuck after teleporting
 -fix energy-spark (with draining)
 -fix teleport charging and teleport location (middle of gridpoint), and charging-bar

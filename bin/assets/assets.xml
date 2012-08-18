@@ -52,7 +52,8 @@
 	<sound name="zombie_bite_01" file="zombies/ZombieBites01.mp3"/>
 	<sound name="zombie_bite_02" file="zombies/ZombieBites02.mp3"/>	
 	
-	<pic name="BasicCreep" file="creeps/scientist01.png"/>
+	<pic name="Spawner" file="creeps/scientist01.png"/>
+	<pic name="BasicCreep" file="creeps/creep12.png"/>
 	<pic name="SlowBigCreep" file="creeps/creep12.png"/>
 	<pic name="BigCreep" file="creeps/Wraith_Uncloaked Base.png"/>
 	<pic name="FastMover" file="creeps/creep14.png"/>

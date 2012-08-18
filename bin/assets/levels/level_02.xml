@@ -24,6 +24,6 @@
     <squad creepid="BasicCreep" startpointid="1" amount="1" spacing="0" />
   </wave>
   <wave timeout="20000">
-    <squad creepid="BigCreep" startpointid="1" amount="20" spacing="500" />
+    <squad creepid="BasicCreep" startpointid="1" amount="20" spacing="500" />
   </wave>
 </data>
