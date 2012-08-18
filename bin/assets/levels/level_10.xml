@@ -1,12 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <data>
-  <settings width="9" height="9" startenergy="500" maxcreeps="1" logo="BasicCreep" />
-  <player x="4" y="4" />
-  <goal x="7" y="7" />
+  <settings width="15" height="19" startenergy="500" maxcreeps="10" logo="BossOne" />
+  <player x="7" y="15" />
+  <goal x="1" y="17" />
   <start x="1" y="1" id="1" />
-  <structure structureid="BasicWall" x="1" y="2" w="6" h="1" />
-  <upgrade id="BasicWall" />
+  <trap type="slow" x="13" y="3" />
+  <trap type="slow" x="13" y="2" />
+  <trap type="fire" x="11" y="10" />
+  <trap type="fire" x="11" y="11" />
+  <trap type="fire" x="10" y="10" />
+  <trap type="fire" x="9" y="10" />
+  <trap type="fire" x="9" y="11" />
+  <trap type="fire" x="10" y="11" />
+  <recharge x="12" y="17" />
+  <recharge x="13" y="17" />
+  <recharge x="13" y="16" />
+  <recharge x="12" y="16" />
+  <structure structureid="BasicWall" x="1" y="2" w="12" h="2" />
+  <structure structureid="BasicWall" x="1" y="10" w="8" h="2" />
+  <structure structureid="StandardTower" x="12" y="10" w="2" h="2" />
+  <structure structureid="BasicWall" x="5" y="6" w="9" h="2" />
+  <structure structureid="StandardTower" x="3" y="6" w="2" h="2" />
+  <upgrade id="StandardTower" />
   <upgrade id="PeaShooter" />
+  <upgrade id="OrbGun" />
   <talk charactername="AI" side="left" text="wanna hear a joke?" />
   <talk charactername="Player" side="right" text="Want doesnt describe my anticipation" />
   <talk charactername="Scientist" side="right" text="He has great jokes" />
@@ -18,6 +35,12 @@
     <squad creepid="BasicCreep" startpointid="1" amount="1" spacing="0" />
   </wave>
   <wave timeout="20000">
-    <squad creepid="BigCreep" startpointid="1" amount="3" spacing="100" />
+    <squad creepid="BossOne" startpointid="1" amount="1" spacing="0" />
+  </wave>
+  <wave timeout="20000">
+    <squad creepid="BasicCreep" startpointid="1" amount="20" spacing="500" />
+  </wave>
+  <wave timeout="20000">
+    <squad creepid="BossOne" startpointid="1" amount="2" spacing="5000" />
   </wave>
 </data>

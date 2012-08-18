@@ -34,7 +34,7 @@ package UI
 		{
 			if (collidePoint(x, y, world.mouseX, world.mouseY))
 			{	
-				
+				Level(world).menu.setInfo(upgrade.getInfo());// setUpgrade(upgradenr);
 				if ( Input.mousePressed )
 				{	
 					Level(world).setUpgrade(upgradenr);

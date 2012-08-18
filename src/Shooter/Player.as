@@ -84,6 +84,8 @@ package Shooter
 		public function setWeapon(weapon:Weapon):void
 		{			
 			world.remove(currentWeapon);
+			weapon.x = centerX;
+			weapon.y = centerY;
 			currentWeapon = weapon;
 			world.add(currentWeapon);
 		}

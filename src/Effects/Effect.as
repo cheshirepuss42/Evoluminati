@@ -4,7 +4,7 @@ package Effects
 	import flash.filters.ConvolutionFilter;
 	import net.flashpunk.FP;
 
-	public class Effect implements IEffect
+	public class Effect
 	{
 		public var duration:Number = 0;
 		public var timer:Number;

@@ -38,6 +38,7 @@ package UI
 		override public function added():void
 		{
 			Level(world).setUpgrade(0);
+			//updateCursor("NoWeapon");
 		}
 		override public function update():void
 		{			

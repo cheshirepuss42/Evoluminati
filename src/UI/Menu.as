@@ -35,47 +35,30 @@ package UI
 			var pad:int=3;
 			var totalw:int = (amx * w) + (pad * (amx - 1));
 			var totalh:int = (amy * h) + (pad * (amy - 1));
-			var offsetx:int = FP.halfWidth-(totalw/2);
-			var offsety:int = FP.halfHeight-(totalh/2);
+			var offsetx:int = FP.halfWidth - (totalw / 2);			
+			var offsety:int = FP.halfHeight - (totalh / 2);			
 			buttons = new Vector.<MenuButton>();
 			for (var i:int = 0; i < upgrades.length; i++) 
 			{
-				var ib:MenuButton = new MenuButton().setupMenuButton(GI,upgrades[i].properName, offsetx + ((i % amx) * (w + pad)), offsety + ((int(i / amx) % amy) * (h + pad)), w, h, upgrades[i],i);
+				var ib:MenuButton = new MenuButton().setupMenuButton(GI, upgrades[i].properName, offsetx + ((i % amx) * (w + pad)), offsety + ((int(i / amx) % amy) * (h + pad)), w, h, upgrades[i], i);				
 				buttons.push(ib);
-			}	
+				world.add(buttons[i]);
+			}		
 			showButtons(false);
 		}
+		
 		public function showButtons(vis:Boolean):void		
 		{			
 			for (var i:int = 0; i < buttons.length; i++) 
 			{
 				buttons[i].visible = vis;
 				buttons[i].active = vis;
-				//if (vis)
-				//{
-					//buttons[i].slideTo(x + 100, y + 100, 0.5);
-				//}
-				//else
-				//{
-					//buttons[i].slideTo(x - 100, y - 100, 0.5);
-				//}
 			}
-			//visible = waveTimer.visible = info.visible = !visible;
 		}
 
 		public function setInfo(str:String):void
 		{
-			info.text = str;
-			//check all buttons and set txt
-			var arr:Array = [];
-			world.getType("button", arr);
-			for (var i:int = 0; i < arr.length; i++) 
-			{
-				if (Button(arr[i]).showTxt)
-				{
-					info.text = Button(arr[i]).infoTxt;				
-				}				
-			}				
+			info.text = str;			
 		}
 		override public function render():void
 		{			
@@ -86,6 +69,12 @@ package UI
 		override public function added():void
 		{
 			//graphic = Image.createRect(FP.width, G.menuHeight, 0xffffff, 0.2);
+			setupHUD();
+			setupButtons();
+			
+		}
+		private function setupHUD():void 
+		{
 			var barHeight:int = 25;
 			var menuHeight:int = barHeight * 3;
 			layer = G.layerOverlayMenu;
@@ -101,13 +90,7 @@ package UI
 			world.add(waveTimer);
 			world.add(shieldStatus);
 			world.add(energyStatus);
-			world.add(info); 
-			setupButtons();
-			for (var i:int = 0; i < buttons.length; i++) 
-			{
-				world.add(buttons[i]);
-				
-			}			
+			world.add(info); 			
 		}
 		override public function removed():void
 		{

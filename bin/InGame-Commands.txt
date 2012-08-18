@@ -8,3 +8,126 @@ shift-click = sell structure
 hold space = show arsenal-menu
 1-0 = change cursor to tower or gun
 q=select last-used weapon
+
+available creeptypes:
+	- A: basic
+	- B: A + Speedy
+	- C: A + Tough
+	- D: C + SpeedOnFirstDamage
+	- E: C + ImmuneToSlow
+	- F: C + Tough + Slow
+	- G: B + SpawnsCreep
+	- H: F + ImmuneToTrapsAura + DropsMore
+	- I: A + BossHealth + DropsMore
+	- J: I + ImmuneToSlowAura
+	- K: C + Slow
+	- L: K + DrainsMore
+
+available arsenal:
+	- A: Nothing
+	- B: PeaShooter
+	- C: OrbGun
+	- D: FlameThrower
+	- E: PoisonGun
+	- F: Teleporter
+	- G: RingOfFire
+	- H: Wall
+	- I: StandardTower
+	- J: ColdTower
+	- K: SniperTower
+	- L: PoisonTower
+
+story/level flow:
+	1. C: Hi there robot i have no time for you now, i need to get into the next room
+	1. L: (no weapons) start with small room 1 entrance, one wave of one creep  (it will burn on the shield of scientist)
+	2. C: oh my god he's trying to kill me, help me you small fucking robot
+	2. L: (meet the gun) get gun in clear room with one entrance, 2 basiccreeps 
+	3. C: you are good at this, let's see if i can upgrade you, don't forget to recharge
+	3. L: (meet the recharge) same type of room, now more waves and a recharge-place 
+	4. C: 
+	4. L: (meet the slowtrap) same type of room as in 3, now with a row of slowtraps
+	5. C: 
+	5. L: (meet fast creep) different room, bigger, more mazey, 3 waves, second fast
+	6. C: 
+	6. L: (meet the wall) allow for making a maze that forces creeps on slowtraps
+	7. C:
+	7. L: (meet the bigcreep) 
+	8. C: 
+	8. L: (meet the miniboss)
+	9. C: 
+	9. L: (meet the standardtower)
+	10. C: 
+	10. L: (meet slowbigcreep)
+	11. C: 
+	11. L: (meet slowtower)		
+	12. C: 
+	12. L: (meet orbgun)		
+	13. C: 
+	13. L: (meet fastbigcreep)		
+	14. C: 
+	14. L: (meet other miniboss)		
+	15. C: 
+	15. L: 	
+	16. C: 
+	16. L: 	
+	17. C: 
+	17. L: 	
+	18. C: 
+	18. L: 	
+	19. C: 
+	19. L: 
+	20. C: 
+	20. L: (meet finalboss)
+	21. C: 
+	21. L: (meet secret final boss)
+	
+		Level Sequence
+	intro: you move through a hallway with some recharge stations and at the end the scientist
+	introduce scientist, recharge and gun, and normal creeps
+	introduce a (prebuilt) maze
+	introduce (prebuilt)damage trap, and normal faster creeps
+	introduce wall
+	introduce (prebuilt) slow trap, and normal tougher creeps
+	miniboss colleagues
+	introduce standard-tower, and slow tough creeps
+	introduce killshield (shield around robot that damages creeps a lot but also costs a lot of energy)
+	introduce slow tower, and creeps that move faster when shot
+	introduce kill-all-creeps bomb and creeps immune to traps
+	a chaser level (you move through a maze towards the exit and creeps do it too, you must get to the end before they do)
+	miniboss clones and introduce poison gun
+	introduce poison tower and creeps immune to poison
+	introduce healing creeps
+	introduce creeps that spawn creeps on death
+	introduce super-energy-draining creeps and slow moving orb gun
+	introduce creeps that on death heal surrounding creeps
+	introduce creeps that make others immune to slow (but not itself)
+	protect self-destruct device
+	secret bonus level, fight AI
+Story Sequence summary per level
+	the introduction
+		An advertisement for Universal Instant Communication (whichs allows R to function)
+		A sequence depicting the robot applying for a job at the big spaceship
+	The scientist (S) is alarmed and asks for help
+	S thanks robot (R) and says we have to hurry, AI says to hold still and wait for instructions, S says not to trust AI
+	AI asks again to stay in this room and wait for the creeps, S says to ignore AI
+	AI loses temper about not listening, S says they are on the way to fix it
+	S tells R about self destruct device (SDD)
+	AI turns out to be cause of all this, and to be the imprint of someones brain, that S knows, AI sends fellow scientists who it did special experiments on
+	S says that it is possible to take control of the ship, AI says only he managed to do it
+	AI says he just wants to colonize some planets, just like other life forms, he just evolves a little quicker
+	S knows where to get something special, AI disagrees
+	S gives R the Kill all creeps bomb, AI doesn't like it
+	AI gets enraged and sends creeps down a lane to chase R and S
+	AI says he's S twin brother who got killed and was helped by S to research gene-tech to make another body, sends in failed clones of S
+	AI suggests he was killed by S
+	S asks AI why he cant just make a body for himself and be done with it, AI says power is nice
+	AI asks who is causing more suffering, the AI or S and R, with all the killing and SDD and what not
+	S explains that the AI got too powerful when stored too long in a ship computer, AI agrees
+	AI explains that S helped him, but betrayed him
+	S is revealed to actually be the cause of the accident that killed AI, and S admits he sort of wanted it to happen
+	S gets electrified by the SDD, R gets the choice of destroying or protecting the SDD
+	the choice
+		If SDD was destroyed by creeps: Game Over. The robot is destroyed, the AI gloats and moves to colonize planets
+		If SDD was protected: Game Over. The ship explodes and the universe can focus on the zillion other threats it faces
+		If SDD was destroyed by R: The AI thanks R for destroying the SDD, then sends creeps to kill R's power generator
+	The robot survives and becomes the AI of the ship, moving to colonize some planets

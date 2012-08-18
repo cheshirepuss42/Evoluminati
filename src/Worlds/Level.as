@@ -65,7 +65,7 @@ package Worlds
 		private var followPlayer:Boolean;
 		private var helpLabel:Label;		
 		private var lastSelectedUpgrade:int;
-		
+		private var gameIsOver:Boolean;
 		public function Level(g:GameInfo)
 		{
 			super(g);
@@ -94,7 +94,7 @@ package Worlds
 			currentWave = new Vector.<CreepSquad>();
 			creepDeathReward = false;
 			creepEnergyDrainSpeed = 15;
-		
+			gameIsOver = false;
 			amountKilled = 0;
 			lastSelectedUpgrade = 0;
 			waveCount = 0;
@@ -148,10 +148,7 @@ package Worlds
 				add(data.tutorial);
 				data.tutorial.start();
 				gameIsPaused = true;
-				//trace("tutorial found, pausing game");
 			}
-			
-			//gameIsPaused = data.tutorial.hasContent();
 		}
 		override public function clean():void 
 		{
@@ -187,8 +184,6 @@ package Worlds
 				handleCursor();
 				handlePlayer();			
 				menu.setInfo("press space for menu\nwaves:" + waveCount+ "\npoints:" + player.upgradePoints);
-				//handleEnergy();							
-					
 			}
 		}
 
@@ -225,8 +220,8 @@ package Worlds
 		
 			if (Input.check(Key.SPACE))
 			{	
-				showMenu();
-
+				if(!gameIsOver)
+					showMenu();				
 			}		
 			if (Input.released(Key.SPACE))
 			{
@@ -255,7 +250,7 @@ package Worlds
 		{
 			gameIsPaused = true;
 			menu.showButtons(true);
-			cursor.alpha = 0.5;			
+			cursor.alpha = 0.2;			
 		}
 		public function hideMenu():void		
 		{
@@ -345,7 +340,6 @@ package Worlds
 				{
 					gameOver(false);									
 				}
-				//else
 					
 			}
 			currentDeploymentTime+=FP.elapsed;	
@@ -359,8 +353,7 @@ package Worlds
 			var anywayBlocked:Boolean=((player.energy < cursor.energyCost) ||
 				(playMode==G.modeBuild && player.distanceToPoint(mouseX, mouseY, true) > player.currentWeapon.range) ||
 				(playMode==G.modeBuild && player.collideWith(cursor, player.x, player.y) != null) ||
-				(menu.collidePoint(menu.x, menu.y, mouseX, mouseY)));
-			//trace("cursor anywayblocked",player.energy,anywayBlocked,playMode,player.distanceToPoint(mouseX, mouseY, true),player.currentWeapon.range,player.energy,cursor.energyCost);
+				(menu.collidePoint(menu.x, menu.y, mouseX, mouseY)));			
 			if (!anywayBlocked)
 			{
 				if (playMode == G.modeBuild)
@@ -460,40 +453,6 @@ package Worlds
 				camera.y = Math.floor(player.centerY - (FP.halfHeight));
 			}	
 			player.handleEnergyRecharge();
-			//
-			//if (player.collide("creep", player.x, player.y)!=null)
-			//{
-				//energy -= creepEnergyDrainSpeed*FP.elapsed;
-			//}
-			//if (energy <= G.maxEnergy )
-				//energy += ambientRechargePS * FP.elapsed;
-			//var notRecharging:Boolean = true;
-			//for (var i:int = 0; i < data.rechargePoints.length; i++) 
-			//{
-				//if (energy <= G.maxEnergy&& player.collideWith(data.rechargePoints[i], player.x, player.y)!=null)
-				//{
-					//if(!A.sfx["menu_select_01"].playing)
-						//A.sfx["menu_select_01"].loop();	
-					//data.rechargePoints[i].flash();
-					//rechargedSoFar += rechargeSpeed * FP.elapsed;
-					//energy += rechargeSpeed * FP.elapsed;
-					//if (rechargedSoFar > 2)
-					//{
-						//TextSpark(FP.world.create(TextSpark)).setup(player.centerX, player.centerY, "+" + String(2), 0xccffcc, 20);
-						//rechargedSoFar = 0;
-					//}
-					//notRecharging = false;
-				//}
-				//else
-				//{
-					//data.rechargePoints[i].stopFlash();
-				//}
-			//}
-			//if (notRecharging)
-			//{
-				//A.sfx["menu_select_01"].stop();				
-			//}
-
 			player.handlePickups();
 			if(!cursor.isBlocked &&  !Input.check(Key.SHIFT))
 				handleMouseInputForPlayer();
@@ -505,38 +464,6 @@ package Worlds
 		}
 		private function handleMouseInputForPlayer():void
 		{	
-			//var cursorBlocked:Boolean = cursor.isBlocked;
-			//var shiftDown:Boolean = Input.check(Key.SHIFT);
-			//var rightMode:Boolean = (playMode == G.modeShoot || playMode == G.modeTeleport) ;
-			//var onCoolDown:Boolean = player.currentWeapon.isOnCooldown;
-			//
-			//if (!cursor.isBlocked &&  !Input.check(Key.SHIFT) && (playMode == G.modeShoot || playMode == G.modeTeleport) && !player.currentWeapon.isOnCooldown)
-			//{
-				//als het een wapen is
-				//check mousedown en schiet elke 
-				//als het een chargable wapen is
-				//als het een structure is
-				//
-				//if (Input.mouseDown)
-				//{
-					//incurr energy-cost for firing
-					//if (player.currentWeapon.name != "Teleporter")
-					//{
-						//player.fire();
-					//}
-					//else
-					//{
-						//player.startCharging();
-						//
-					//}
-				//
-				//}
-				//if (Input.mousePressed)
-				//
-				//if (player.currentWeapon.name == "Teleporter")
-					//player.stopCharging();
-					//
-			//}
 			if (Input.mousePressed)//mouse was just clicked
 			{		
 				if (player.currentWeapon.name == "Teleporter")
@@ -565,6 +492,7 @@ package Worlds
 		}
 		private function gameOver(dead:Boolean):void
 		{
+			gameIsOver = true;
 			if (dead)
 			{				
 				GI.sfx["game_over"].play();	
@@ -574,7 +502,8 @@ package Worlds
 			}
 			else
 			{
-				if (player.collideWith(exit, player.x, player.y))
+				trace("jhgghhhgy");
+				if(Input.pressed(Key.SPACE))
 				{
 					data.result.dead = dead;
 					data.result.pointsCollected = player.upgradePoints * Stats.data.getStat("upgradepointbonus").modifier;					
