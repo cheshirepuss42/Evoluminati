@@ -8,7 +8,7 @@ package Creeps
 			super._init(g, startX, startY, "Spawner");
 			traits.push(new SpawnsCreep(GI, creepType));
 			traits.push(new Weak());
-			
+			isSpawner = true;
 			
 		}	
 		

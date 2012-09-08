@@ -59,6 +59,7 @@ package Worlds
 		private var amountKilled:int;
 		private var creepDeathReward:Boolean;
 		private var creepEnergyDrainSpeed:Number;
+		private var messagePanel:MessagePanel;
 
 		private var collectedUpgradePoints:int;
 		private var exit:GroundPoint;
@@ -260,10 +261,12 @@ package Worlds
 		}
 		public function handleCreeps():void
 		{	
-			if(waveCount<data.waves.length)
+			if (waveCount < data.waves.length)
+			{
 				deploymentTimer = data.wavesTiming[waveCount];
 			//update wave timer
 			menu.waveTimer.setFilled( currentDeploymentTime / deploymentTimer);
+			}
 			
 			//deploy squad if timer or f
 			if (waveCount<data.waves.length &&(currentDeploymentTime>deploymentTimer || Input.pressed(Key.F)))			
@@ -309,9 +312,14 @@ package Worlds
 				}
 				if (crp.gotDestroyed)
 				{
-					var dropType:String = FP.choose("upgrade","energy");
-					CreepDrop(create(CreepDrop)).setup(GI,crp.x, crp.y, crp.reward,dropType);					
-					amountKilled++;
+					if (!crp.isSpawner)
+					{
+						var dropType:String = FP.choose("upgrade","energy");
+						CreepDrop(create(CreepDrop)).setup(GI,crp.x, crp.y, crp.reward,dropType);					
+						amountKilled++;	
+						creepCount--;					
+					}
+
 					ground.makeStain(crp.x,crp.y)
 					recycle(crp);
 					GI.zombieMoan();
@@ -319,7 +327,7 @@ package Worlds
 					if(creepDeathReward)
 						player.energy += crp.reward;
 						
-					creepCount--;
+					
 				}				
 			}
 			mapShouldBeUpdated = false;
@@ -331,7 +339,7 @@ package Worlds
 					currentWave.splice(j, 1);
 			}
 			//reduce timer if there are no creeps left
-			var empty:Boolean = (creepCount == 0 && currentWave.length == 0);
+			var empty:Boolean = (creepCount <= 0 && currentWave.length == 0);
 			
 			if (empty)
 			{
@@ -502,7 +510,15 @@ package Worlds
 			}
 			else
 			{
-				trace("jhgghhhgy");
+				//if no panel, roll in panel
+				if (messagePanel == null)
+				{
+					messagePanel = new MessagePanel();
+					messagePanel.setupMessagePanel(GI, "Congrats!\npress space to end level");					
+					
+					//messagePanel.slideFromTo(FP.width, messagePanel.y, messagePanel.padding, messagePanel.padding, 1000);
+					add(messagePanel);
+				}
 				if(Input.pressed(Key.SPACE))
 				{
 					data.result.dead = dead;

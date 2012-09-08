@@ -99,7 +99,7 @@
 	<pic name="floortrap_01" file="floortiles/floortrap01.png"/>	
 	<pic name="floortrap_02" file="floortiles/floortrap02.png"/>	
 	<pic name="floortilesheet" file="floortiles/tilesheet.png"/>	
-	<pic name="labelgradient" file="labelgradient2.png"/>	
+	<pic name="labelgradient" file="labelgradient4.png"/>	
 	
 	
 </data>

@@ -43,8 +43,9 @@ package Creeps
 		private var damageSinceLastSpark:Number;
 		public var drainAmount:Number;
 		private var immunities:Vector.<String>;
-		public var immuneToSlow:Boolean;
-		public var immuneToTraps:Boolean;
+		public var isSpawner:Boolean;
+		//public var immuneToSlow:Boolean;
+		//public var immuneToTraps:Boolean;
 		public var aura:Aura;
 		public var GI:GameInfo;
 		public function Creep() 
@@ -67,6 +68,7 @@ package Creeps
 		}
 		public function _init(g:GameInfo,startX:int, startY:int, pic:String):void		
 		{
+			isSpawner = false;
 			GI = g;
 			traits = new Vector.<Trait>();
 			effects = new Vector.<Effect>();
@@ -86,7 +88,8 @@ package Creeps
 			path = DM.path(x, y);
 			drainAmount = 10;
 			aura = null;
-			immunities = new Vector.<String>();			
+			immunities = new Vector.<String>();	
+			
 		}
 		private function applyTraits(timing:String):void
 		{
@@ -105,6 +108,7 @@ package Creeps
 			healthBar = new HealthBar(halfWidth, height / 6);
 			healthBar.graphic.x = halfWidth - healthBar.halfWidth;
 			healthBar.graphic.y = height - healthBar.height;
+			handleHealth();
 			if (aura != null)
 			{
 				world.add(aura);
@@ -205,8 +209,7 @@ package Creeps
 			move();
 			handleProjectiles();
 			handleEffects();
-			if(!immuneToTraps)
-				handleTraps();
+			handleTraps();
 			handleAuras();
 			handleHealth();
 			wasDamaged = false;
